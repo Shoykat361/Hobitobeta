@@ -1,7 +1,7 @@
 package com.shoykat.habitobeta.utils
 
-import com.santtuhyvarinen.habittracker.models.HabitWithTaskLogs
-import com.santtuhyvarinen.habittracker.models.TaskLog
+import com.shoykat.habitobeta.models.HabitWithTaskLogs
+import com.shoykat.habitobeta.models.TaskLog
 import org.joda.time.DateTime
 import org.joda.time.Days
 

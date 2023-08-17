@@ -17,15 +17,15 @@ class HabitInfoUtil {
             return priorityLevels[index]
         }
 
-        fun getRecurrenceHeader(context: Context, weekDaysSelectionModel: WeekDaysSelectionModel) : String {
+        /*fun getRecurrenceHeader(context: Context, weekDaysSelectionModel: WeekDaysSelectionModel) : String {
             if(weekDaysSelectionModel.isEveryDaySelectedOrNotSelected()) {
                 return context.getString(R.string.habit_repeat_every_day)
             } else {
                 return context.getString(R.string.habit_repeat_days, getWeekDaysSelectedText(context, weekDaysSelectionModel))
             }
-        }
+        }*/
 
-        fun getRecurrenceText(context: Context, habit: Habit) : String {
+        /*fun getRecurrenceText(context: Context, habit: Habit) : String {
             val weekDaysSelectionModel = WeekDaysSelectionModel()
             CalendarUtil.parseRRULEtoWeekDaysSelectionModel(habit.taskRecurrence, weekDaysSelectionModel)
 
@@ -34,7 +34,7 @@ class HabitInfoUtil {
             } else {
                 return context.getString(R.string.repeat_every, getWeekDaysSelectedText(context, weekDaysSelectionModel))
             }
-        }
+        }*/
 
         private fun getWeekDaysSelectedText(context: Context, weekDaysSelectionModel: WeekDaysSelectionModel) : String {
             val daysSelected = weekDaysSelectionModel.getNumberOfDaysSelected()

@@ -181,7 +181,7 @@ class CalendarUtil {
 
         fun getCurrentWeekDayText(context: Context) : String {
             val dayOfWeek = getCurrentWeekDay() -1
-            //val weekDaysArray = context.resources.getStringArray(R.array.WeekDays)
+            val weekDaysArray = context.resources.getStringArray(R.array.WeekDays)
 
             return weekDaysArray[dayOfWeek]
         }
@@ -192,9 +192,9 @@ class CalendarUtil {
 
         fun getWeekDayTextShort(context: Context, date: DateTime) : String {
             val dayOfWeek = date.dayOfWeek - 1
-            //val weekDaysArray = context.resources.getStringArray(R.array.WeekDaysShort)
+            val weekDaysArray = context.resources.getStringArray(R.array.WeekDaysShort)
 
-            //return weekDaysArray[dayOfWeek]
+            return weekDaysArray[dayOfWeek]
         }
 
         //Monday == 1

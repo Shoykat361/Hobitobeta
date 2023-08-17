@@ -3,8 +3,12 @@ package com.shoykat.habitobeta.utils
 import android.content.Context
 import android.content.Intent
 import android.os.Build
+import android.os.Build.*
 import android.os.VibrationEffect
 import android.os.Vibrator
+import android.preference.PreferenceManager
+import com.shoykat.habitobeta.R
+import com.shoykat.habitobeta.services.NotificationService
 import java.util.*
 
 class SettingsUtil {
@@ -24,7 +28,7 @@ class SettingsUtil {
 
             val vibrateService = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            if (Build.VERSION.SDK_INT >= VERSION_CODES.O) {
                 vibrateService.vibrate(VibrationEffect.createOneShot(DEFAULT_VIBRATE_LENGTH, VibrationEffect.DEFAULT_AMPLITUDE))
             } else {
                 vibrateService.vibrate(DEFAULT_VIBRATE_LENGTH);
@@ -40,7 +44,7 @@ class SettingsUtil {
         fun startNotificationService(context: Context) {
             val intent = Intent(context, NotificationService::class.java)
 
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            if(VERSION.SDK_INT >= VERSION_CODES.O) {
                 context.startForegroundService(intent)
             } else {
                 context.startService(intent)
@@ -73,7 +77,7 @@ class SettingsUtil {
         }
 
         fun getLocale(context: Context) : Locale {
-            return if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            return if(VERSION.SDK_INT >= VERSION_CODES.N) {
                 context.resources.configuration.locales[0]
             } else {
                 context.resources.configuration.locale

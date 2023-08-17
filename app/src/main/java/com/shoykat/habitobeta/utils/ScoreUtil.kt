@@ -1,5 +1,7 @@
 package com.shoykat.habitobeta.utils
 
+import com.shoykat.habitobeta.models.HabitWithTaskLogs
+
 
 class ScoreUtil {
     companion object {
