@@ -2,6 +2,7 @@
     <string name="app_name">Habito beta</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="daily" />
     <string name="repeat_every" />
     <string name="habit_repeat_every_day" />
@@ -14,7 +15,6 @@
     <string name="setting_touch_feedback_key" />
     <string name="setting_task_stat_key" />
     <string name="setting_task_sort_key" />
-    <?xml version="1.0" encoding="utf-8"?>
         <string-array name="WeekDays">
             <item>Monday</item>
             <item>Tuesday</item>
